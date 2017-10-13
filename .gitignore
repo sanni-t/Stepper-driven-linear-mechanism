@@ -1,0 +1,6 @@
+#Ignore individual parts files
+/McMaster parts/
+/OpenBuildStore STEP Parts Library 1.5/
+/Servocity parts/
+leadScrew arrangement_incomplete.3dm
+leadScrew arrangement_with 1 motor.3dm
