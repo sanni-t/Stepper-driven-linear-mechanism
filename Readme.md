@@ -5,5 +5,3 @@ ServoCity
 OpenBuilds
 McMaster Carr
 Roton
-
-*Work in progress*
