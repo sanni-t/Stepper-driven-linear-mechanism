@@ -1,6 +1,6 @@
 //bigEasyStepperCode.ino
 
-#define TOTAL_DISTANCE      1640   	//mm
+#define TOTAL_DISTANCE      1600   	//mm
 #define TOTAL_NUM_STEPS     220000	//(Total distance/lead screw travel distance per rev) * Steps/rev
 #define LEFT_START_DISTANCE 60
 #define RUN_INTERVAL        550
