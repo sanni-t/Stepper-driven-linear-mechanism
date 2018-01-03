@@ -1,6 +1,6 @@
 //bigEasyStepperCode.ino
 
-#define TOTAL_DISTANCE  1650   	//mm
+#define TOTAL_DISTANCE  1640   	//mm
 #define TOTAL_NUM_STEPS 220000	//(Total distance/lead screw travel distance per rev) * Steps/rev
 #define RUN_INTERVAL    550
 #define EN       2
@@ -83,7 +83,11 @@ void resetPosition()
   digitalWrite(DIR, dir); //Pull direction pin high/low to move in reverse/forward respectively
   delay(1000);
   stepUp();
-  
+  //Set the starting point a little far from end switch so the switch isn't hit every time
+  for(int dist = 0; dist <= 60; dist+=3)
+  {
+    oneRev();
+  }
   digitalWrite(led, LOW);
 }
 
