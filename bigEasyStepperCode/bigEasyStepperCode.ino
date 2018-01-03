@@ -1,8 +1,9 @@
 //bigEasyStepperCode.ino
 
-#define TOTAL_DISTANCE  1640   	//mm
-#define TOTAL_NUM_STEPS 220000	//(Total distance/lead screw travel distance per rev) * Steps/rev
-#define RUN_INTERVAL    550
+#define TOTAL_DISTANCE      1640   	//mm
+#define TOTAL_NUM_STEPS     220000	//(Total distance/lead screw travel distance per rev) * Steps/rev
+#define LEFT_START_DISTANCE 60
+#define RUN_INTERVAL        550
 #define EN       2
 #define MS1 	   3
 #define MS2 	   4
@@ -84,7 +85,7 @@ void resetPosition()
   delay(1000);
   stepUp();
   //Set the starting point a little far from end switch so the switch isn't hit every time
-  for(int dist = 0; dist <= 60; dist+=3)
+  for(int dist = 0; dist <= LEFT_START_DISTANCE; dist+=3)
   {
     oneRev();
   }
